@@ -118,3 +118,12 @@ class CenteredFigure(object):
         if self._surface is not None:
             pygame.draw.polygon(self._surface, self._color, self.get_vertices(),
                                 self._width)
+
+    def scale(self, factor):
+        """
+        Scale the figure.
+        
+        :param factor: 
+        :return: 
+        """
+        self._points = [(x * factor, y * factor) for x, y in self._points]
