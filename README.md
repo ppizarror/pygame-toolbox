@@ -24,4 +24,4 @@ Toolbox for pygame, contains functions and classes to manipulate figures, points
 This project is licenced under GPLv3 (GNU General Public License, version 3) [https://www.gnu.org/licenses/gpl-3.0.html].
 
 ## Author
-Author: Pablo Pizarro, 2017.<br>
+Author: Pablo Pizarro, 2017<br>
