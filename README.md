@@ -10,7 +10,7 @@ Toolbox for pygame, contains functions and classes to manipulate figures, points
 - **centered_figure**
 
     ```python
-    triangle = CenteredFigure([(0, 0), (0, 1), (0, 3)], [10, 10], '#010340')
+    triangle = CenteredFigure([(0, 0), (0, 1), (0, 3)], [10, 10])
     square = CenteredFigure([(0, 0), (0, 1), (1, 1), (1, 0)], [10, 10])
     
     triangle.intersect(square) # True
