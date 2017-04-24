@@ -15,6 +15,10 @@ Toolbox for pygame, contains functions and classes to manipulate figures, points
     
     triangle.intersect(square) # True
     ```
+    
+## Requirements
+- <a href="https://pypi.python.org/pypi/Shapely">Shapely</a>
+- <a href="http://www.pygame.org/download.shtml">Pygame</a>
 
 ## Licence
 This project is licenced under GPLv3 (GNU General Public License, version 3) [https://www.gnu.org/licenses/gpl-3.0.html].
