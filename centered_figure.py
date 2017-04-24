@@ -5,11 +5,11 @@ Create figure with an (x,y) center, set color, thickness and surface to plot
 (optional).
 
 Usage:
-    triangle = CenteredFigure([(0, 0), (0, 1), (0, 3)], [10, 10], '#010340')
+    triangle = CenteredFigure([(0, 0), (0, 1), (0, 3)], [10, 10])
     square = CenteredFigure([(0, 0), (0, 1), (1, 1), (1, 0)], [10, 10])
-    
+
     triangle.intersect(square) -> true
-    
+
 Copyright (C) 2017 Pablo Pizarro @ppizarror
 
 This program is free software: you can redistribute it and/or modify
@@ -29,17 +29,17 @@ import pygame
 
 
 class CenteredFigure(object):
-    def __init__(self, points, center, color='#000000', width=0,
+    def __init__(self, points, center, color=None, width=0,
                  pygame_surface=None):
         """
         Create centered figure from point list with center (x,y).
-        
-        :param points: Point tuple list (ex. [(10,10), (10,5)...])
+
+        :param points: Vertices tuple list (ex. [(10,10), (10,5)...])
         :type points: list
         :param center: Center list (ex [10, 10])
         :type center: list
-        :param color: Color of the figure (HEX string)
-        :type color: str
+        :param color: Pygame color
+        :type color: pygame.Color
         :param width: Border width (px)
         :param pygame_surface: Pygame surface object
         :type pygame_surface: pygame.display
@@ -50,13 +50,42 @@ class CenteredFigure(object):
         self._width = width
         self._surface = pygame_surface
 
+    def set_color(self, color):
+        """
+        Set figure color.
+
+        :param color: Pygame color
+        :return:
+        """
+        self._color = color
+
+    def set_surface(self, surface):
+        """
+        Set pygame surface object.
+
+        :param surface: Pygame display surface.
+        :type surface: pygame.display
+        :return:
+        """
+        self._surface = surface
+
+    def set_center(self, center):
+        """
+        Set figure center.
+
+        :param center: Center list
+        :type center: list
+        :return:
+        """
+        self._center = center
+
     def intersect(self, figure):
         """
         Intersect figure with another figure.
-        
+
         :param figure: Figure to intersect
         :type figure: CenteredFigure
-        :return: 
+        :return:
         """
         assert isinstance(figure, CenteredFigure), \
             'Figure must be CenteredFigure'
@@ -68,7 +97,7 @@ class CenteredFigure(object):
     def get_vertices(self):
         """
         Return tuple list of centered points.
-        
+
         :return: List of tuples
         :rtype: list
         """
@@ -83,7 +112,7 @@ class CenteredFigure(object):
     def draw(self):
         """
         Draw polygon figure to pygame surface.
-        
+
         :return: None
         """
         if self._surface is not None:
