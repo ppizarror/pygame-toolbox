@@ -29,61 +29,64 @@ import pygame
 
 
 class CenteredFigure(object):
-    def __init__(self, points, center, color=None, width=0,
+    def __init__(self, points, center, color=(255, 255, 255), width=0,
                  pygame_surface=None):
         """
         Create centered figure from point list with center (x,y).
 
-        :param points: Vertices tuple list (ex. [(10,10), (10,5)...])
+        :param points: Clockwise vertices tuple list (ex. [(10,10),(10,5), ...])
         :type points: list
         :param center: Center list (ex [10, 10])
         :type center: list
-        :param color: Pygame color
-        :type color: pygame.Color
+        :param color: Tuple color
+        :type color: tuple
         :param width: Border width (px)
         :param pygame_surface: Pygame surface object
         :type pygame_surface: pygame.display
         """
+        assert self._assert_center(center), 'Center must be a list'
+        assert isinstance(color, tuple), 'Color must be a tuple'
+        assert self._assert_vertices(
+            points), 'Vertices must be a list of tuples'
         self._points = points
         self._center = center
         self._color = color
         self._width = width
         self._surface = pygame_surface
 
-    def set_color(self, color):
+    @staticmethod
+    def _assert_center(center):
         """
-        Set figure color.
-
-        :param color: Pygame color
-        :return:
-        """
-        self._color = color
-
-    def set_surface(self, surface):
-        """
-        Set pygame surface object.
-
-        :param surface: Pygame display surface.
-        :type surface: pygame.display
-        :return:
-        """
-        self._surface = surface
-
-    def set_center(self, center):
-        """
-        Set figure center.
-
+        Check if center variable is correct.
+        
         :param center: Center list
-        :type center: list
-        :return:
+        :return: Boolean
         """
-        self._center = center
+        if isinstance(center, list):
+            if len(center) == 2:
+                return True
+        return False
 
-    def intersect(self, figure):
+    @staticmethod
+    def _assert_vertices(vertices):
         """
-        Intersect figure with another figure.
+        Check if vertices list only contain tuples
+        
+        :param vertices: Vertices list
+        :return: 
+        """
+        if isinstance(vertices, list):
+            for v in vertices:
+                if not isinstance(v, tuple):
+                    return False
+            return True
+        return False
 
-        :param figure: Figure to intersect
+    def collide(self, figure):
+        """
+        Check if figure collides with another figure.
+
+        :param figure: Figure to check collision
         :type figure: CenteredFigure
         :return:
         """
@@ -93,6 +96,25 @@ class CenteredFigure(object):
         p1 = Polygon(self.get_vertices())
         p2 = Polygon(figure.get_vertices())
         return p1.intersects(p2)
+
+    def draw(self):
+        """
+        Draw polygon figure to pygame surface.
+
+        :return: None
+        """
+        if self._surface is not None:
+            pygame.draw.polygon(self._surface, self._color, self.get_vertices(),
+                                self._width)
+
+    def get_center(self):
+        """
+        Return center list (reference).
+        
+        :return: Center list
+        :rtype: list
+        """
+        return self._center
 
     def get_vertices(self):
         """
@@ -109,21 +131,53 @@ class CenteredFigure(object):
         # Return vertex list
         return [(u + cx, v + cy) for u, v in self._points]
 
-    def draw(self):
-        """
-        Draw polygon figure to pygame surface.
-
-        :return: None
-        """
-        if self._surface is not None:
-            pygame.draw.polygon(self._surface, self._color, self.get_vertices(),
-                                self._width)
-
     def scale(self, factor):
         """
         Scale the figure.
-        
+
         :param factor: 
         :return: 
         """
         self._points = [(x * factor, y * factor) for x, y in self._points]
+
+    def set_center(self, center):
+        """
+        Set figure center.
+
+        :param center: Center list
+        :type center: list
+        :return:
+        """
+        self._center = center
+
+    def set_color(self, color):
+        """
+        Set figure color.
+
+        :param color: Pygame color
+        :return:
+        """
+        assert isinstance(color, tuple), 'Color must be a tuple'
+        self._color = color
+
+    def set_surface(self, surface):
+        """
+        Set pygame surface object.
+
+        :param surface: Pygame display surface.
+        :type surface: pygame.display
+        :return:
+        """
+        self._surface = surface
+
+    def set_vertices_points(self, points):
+        """
+        Set vertices points of figure.
+        
+        :param points: Clockwise vertices tuple list (ex. [(10,10),(10,5), ...])
+        :type points: list
+        :return: 
+        """
+        assert self._assert_vertices(
+            points), 'Vertices must be a list of tuples'
+        self._points = points
