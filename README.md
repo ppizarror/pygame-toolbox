@@ -19,17 +19,20 @@ Toolbox for pygame, contains functions and classes to manipulate figures, points
     ```
     
 ## Requirements
-- <a href="http://www.pygame.org/download.shtml">Pygame</a>
-- <a href="https://pypi.python.org/pypi/Shapely">Shapely</a>
- - Windows users: Download <a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#shapely">Shapely whl</a> and install it through pip.
- - Linux users:
-```
-pip install shapely
-```
- - OSX users:
-```
-pip install shapely==1.6b2
-```
+
+<ul>
+    <li>
+    <a href="http://www.pygame.org/download.shtml">Pygame</a>
+    </li>
+    <li><a href="https://pypi.python.org/pypi/Shapely">Shapely</a>
+    <ul>
+    <li>Windows users: Download <a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#shapely">Shapely whl</a> and install it through pip.
+    </li>
+    <li>Linux users: <b>pip install shapely</b>
+    <li>OSX users: <b>pip install shapely==1.6b2</b></li>
+    </ul>
+    </li>
+</ul>
 
 ## Licence
 This project is licenced under GPLv3 (GNU General Public License, version 3) [https://www.gnu.org/licenses/gpl-3.0.html].
