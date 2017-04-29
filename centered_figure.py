@@ -8,7 +8,9 @@ Usage:
     triangle = CenteredFigure([(0, 0), (0, 1), (0, 3)], [10, 10])
     square = CenteredFigure([(0, 0), (0, 1), (1, 1), (1, 0)], [10, 10])
 
-    triangle.intersect(square) -> true
+    triangle.collide(square) -> true
+    triangle.rotate(15) -> Rotate 15 grads Counterclockwise
+    triangle.scale(10) -> Multiply 10 to all vertices position
 
 Copyright (C) 2017 Pablo Pizarro @ppizarror
 
@@ -24,6 +26,7 @@ GNU General Public License for more details.
 """
 
 # Imports
+from math import cos, sin, pi
 from shapely.geometry import Polygon
 import pygame
 
@@ -130,6 +133,21 @@ class CenteredFigure(object):
 
         # Return vertex list
         return [(u + cx, v + cy) for u, v in self._points]
+
+    def rotate(self, angle):
+        """
+        Rotate vertices list (around center, which is mathematically [0,0])
+        
+        :param angle: Rotation angle, Counterclockwise (grad)
+        :return: 
+        """
+        angle = - angle * pi / 180.0
+        rotated_vertices = []
+        for u, v in self._points:
+            nu = u * cos(angle) - v * sin(angle)
+            nv = v * cos(angle) + u * sin(angle)
+            rotated_vertices.append((nu, nv))
+        self._points = rotated_vertices
 
     def scale(self, factor):
         """

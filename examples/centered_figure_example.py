@@ -59,7 +59,8 @@ while True:
     surface.fill(COLOR_BLACK)
 
     # Rotate figures
-    square.
+    square.rotate(1)
+    triangle.rotate(0)
 
     # Draw figures
     square.draw()
