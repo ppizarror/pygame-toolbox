@@ -14,8 +14,8 @@ Toolbox for pygame, contains functions and classes to manipulate figures, points
     square = CenteredFigure([(0, 0), (0, 1), (1, 1), (1, 0)], [10, 10])
 
     triangle.collide(square) # true
-    triangle.rotate(15) # Rotate 15 grads Counterclockwise
-    triangle.scale(10)  # Multiply 10 to all vertices position
+    triangle.rotate(15)      # Rotate 15 grads Counterclockwise
+    triangle.scale(10)       # Multiply 10 to all vertices position
     ```
     
 ## Requirements
