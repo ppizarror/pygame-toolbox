@@ -28,8 +28,8 @@ Toolbox for pygame, contains functions and classes to manipulate figures, points
     <ul>
     <li>Windows users: Download <a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#shapely">Shapely whl</a> and install it through pip.
     </li>
-    <li>Linux users: <b>pip install shapely</b>
-    <li>OSX users: <b>pip install shapely==1.6b2</b></li>
+    <li>Linux users: <pre>pip install shapely</pre>
+    <li>OSX users: <pre>pip install shapely==1.6b2</pre></li>
     </ul>
     </li>
 </ul>
