@@ -30,8 +30,6 @@ pip install shapely
 ```
 pip install shapely==1.6b2
 ```
- -
-
 
 ## Licence
 This project is licenced under GPLv3 (GNU General Public License, version 3) [https://www.gnu.org/licenses/gpl-3.0.html].
