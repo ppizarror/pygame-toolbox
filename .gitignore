@@ -3,3 +3,6 @@
 
 # Pycharm files
 .idea/
+
+# Zip files
+*.zip
