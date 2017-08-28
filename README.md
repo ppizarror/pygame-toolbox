@@ -1,4 +1,8 @@
 # Pygame toolbox
+[![@ppizarror](http://ppizarror.com/resources/images/author.svg)](http://ppizarror.com)
+[![Licencia GPL](http://ppizarror.com/resources/images/licensegpl3.svg)](https://www.gnu.org/licenses/)
+[![Python](http://ppizarror.com/resources/images/python27.svg)](https://www.python.org/downloads/)
+
 Toolbox for pygame, contains functions and classes to manipulate figures, points, sounds, etc.
 
 | File | Description |
