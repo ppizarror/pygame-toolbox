@@ -1,7 +1,14 @@
-# Pygame toolbox
-[![@ppizarror](http://ppizarror.com/resources/images/author.svg)](http://ppizarror.com)
-[![GPL License](http://ppizarror.com/resources/images/licensegpl3.svg)](https://www.gnu.org/licenses/)
-[![Python](http://ppizarror.com/resources/images/python27.svg)](https://www.python.org/downloads/)
+<h1 align="center">
+  <a href=" http://ppizarror.com/pygame-toolbox/" title="Pygame toolbox">
+    <img alt="Pygame toolbox" src="http://ppizarror.com/resources/other/python.png" width="200px" height="200px" />
+  </a>
+  <br /><br />
+  Pygame toolbox</h1>
+<p align="center">Toolbox for pygame</p>
+<div align="center"><a href="http://ppizarror.com"><img alt="@ppizarror" src="http://ppizarror.com/badges/author.svg" /></a>
+<a href="https://www.gnu.org/licenses/"><img alt="License GPL v3" src="http://ppizarror.com/badges/licensegpl3.svg" /></a>
+<a href="https://www.python.org/downloads/"><img alt="Python 2.7" src="http://ppizarror.com/badges/python27.svg" /></a>
+</div><br />
 
 Toolbox for pygame, contains functions and classes to manipulate figures, points, sounds, etc.
 
@@ -39,7 +46,7 @@ Toolbox for pygame, contains functions and classes to manipulate figures, points
 </ul>
 
 ## License
-This project is licensed under GPLv3 (GNU General Public License, version 3) [https://www.gnu.org/licenses/gpl-3.0.html].
+This project is licensed under GPLv3 [https://www.gnu.org/licenses/gpl-3.0.html]
 
 ## Author
-<a href="http://ppizarror.com">Pablo Pizarro R.</a> | 2017.
+<a href="http://ppizarror.com" title="ppizarror">Pablo Pizarro R.</a> | 2017
