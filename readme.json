@@ -2,17 +2,17 @@
     "PROJECT": {
         "NAME": "Pygame toolbox",
         "ICON": {
-            "IMAGE": "http://ppizarror.com/resources/other/python.png",
+            "IMAGE": "https://res.ppizarror.com/other/python.png",
             "ALT": "Pygame toolbox",
             "WIDTH": 200,
             "HEIGHT": 200
         },
-        "URL": " http://ppizarror.com/pygame-toolbox/",
+        "URL": "",
         "URL_TITLE": "Pygame toolbox"
     },
     "AUTHOR": {
         "NAME": "Pablo Pizarro R.",
-        "URL": "http://ppizarror.com",
+        "URL": "https://ppizarror.com",
         "ALT": "ppizarror",
         "DATE": "2017",
         "SECTION": {
@@ -23,17 +23,17 @@
     "DESCRIPTION": "Toolbox for pygame",
     "BADGES": {
         "0": {
-            "IMAGE": "http://ppizarror.com/badges/author.svg",
-            "HREF": "http://ppizarror.com",
+            "IMAGE": "https://res.ppizarror.com/badges/author.svg",
+            "HREF": "https://ppizarror.com",
             "ALT": "@ppizarror"
         },
         "1": {
-            "IMAGE": "http://ppizarror.com/badges/licensegpl3.svg",
+            "IMAGE": "httsp://res.ppizarror.com/badges/licensegpl3.svg",
             "HREF": "https://www.gnu.org/licenses/",
             "ALT": "License GPL v3"
         },
 		"2": {
-		  "IMAGE": "http://ppizarror.com/badges/python27.svg",
+		  "IMAGE": "https://res.ppizarror.com/badges/python27.svg",
 		  "HREF": "https://www.python.org/downloads/",
 		  "ALT": "Python 2.7"
 		}
