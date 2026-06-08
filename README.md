@@ -1,11 +1,8 @@
-<h1 align="center">
-  <img alt="Pygame toolbox" src="https://res.ppizarror.com/other/python.png" width="200px" height="200px" />
-  <br /><br />
-  Pygame toolbox</h1>
+<h1 align="center">Pygame toolbox</h1>
 <p align="center">Toolbox for pygame</p>
-<div align="center"><a href="https://ppizarror.com"><img alt="@ppizarror" src="https://res.ppizarror.com/badges/author.svg" /></a>
-<a href="https://www.gnu.org/licenses/"><img alt="License GPL v3" src="https://res.ppizarror.com/badges/licensegpl3.svg" /></a>
-<a href="https://www.python.org/downloads/"><img alt="Python 2.7" src="https://res.ppizarror.com/badges/python27.svg" /></a>
+<div align="center"><a href="https://ppizarror.com"><img alt="@ppizarror" src="https://img.shields.io/badge/Author-Pablo%20Pizarro%20R.-9f9f9f" /></a>
+<a href="https://www.gnu.org/licenses/"><img alt="License GPL v3" src="https://img.shields.io/badge/License-GPL--3.0-007ec6" /></a>
+<a href="https://www.python.org/downloads/"><img alt="Python 2.7" src="https://img.shields.io/badge/Python-2.7-e05d44" /></a>
 </div><br />
 
 Toolbox for pygame, contains functions and classes to manipulate figures, points, sounds, etc.

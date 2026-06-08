@@ -2,7 +2,7 @@
     "PROJECT": {
         "NAME": "Pygame toolbox",
         "ICON": {
-            "IMAGE": "https://res.ppizarror.com/other/python.png",
+            "IMAGE": "",
             "ALT": "Pygame toolbox",
             "WIDTH": 200,
             "HEIGHT": 200
@@ -23,17 +23,17 @@
     "DESCRIPTION": "Toolbox for pygame",
     "BADGES": {
         "0": {
-            "IMAGE": "https://res.ppizarror.com/badges/author.svg",
+            "IMAGE": "https://img.shields.io/badge/Author-Pablo%20Pizarro%20R.-9f9f9f",
             "HREF": "https://ppizarror.com",
             "ALT": "@ppizarror"
         },
         "1": {
-            "IMAGE": "https://res.ppizarror.com/badges/licensegpl3.svg",
+            "IMAGE": "https://img.shields.io/badge/License-GPL--3.0-007ec6",
             "HREF": "https://www.gnu.org/licenses/",
             "ALT": "License GPL v3"
         },
 		"2": {
-		  "IMAGE": "https://res.ppizarror.com/badges/python27.svg",
+		  "IMAGE": "https://img.shields.io/badge/Python-2.7-e05d44",
 		  "HREF": "https://www.python.org/downloads/",
 		  "ALT": "Python 2.7"
 		}
